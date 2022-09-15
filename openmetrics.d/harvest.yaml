@@ -1,0 +1,9 @@
+## Only set options to override from default values for legibility
+# https://github.com/DataDog/integrations-core/blob/master/openmetrics/datadog_checks/openmetrics/data/conf.yaml.example
+
+init_config:
+instances:
+  - openmetrics_endpoint: http://0.0.0.0:12990/metrics/   # Default prometheus endpoint for harvest
+    namespace: harvest
+    metrics:
+      - *   # Wildcard to collect ALL metrics from endpoint
